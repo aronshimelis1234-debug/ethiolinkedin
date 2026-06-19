@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethio LinkedIn Renting</title>
-    <!-- Tailwind CSS ለሚያምር ዲዛይን -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Font Awesome ለኣይኮኖች -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- Header / ራስጌ -->
+    <!-- Header -->
     <header class="bg-[#0077b5] text-white py-6 shadow-md text-center">
         <div class="max-w-4xl mx-auto px-4">
             <img src="IMG_20260619_121402_550.jpg" alt="Ethio LinkedIn Logo" class="w-24 h-24 mx-auto rounded-full border-4 border-white object-cover mb-3 shadow-lg">
@@ -25,27 +25,27 @@
         <!-- የመመሪያዎች ክፍል -->
         <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
             <h2 class="text-xl font-bold text-[#0077b5] mb-4 flex items-center gap-2">
-                <i class="fas fa-info-circle"></i> መሟላት ያለባቸው መስፈርቶች እና መረጃዎች
+                <i class="fas fa-info-circle"></i> መሟላት ያለባቸው መስፈርቶች እና ጥንቃቄዎች
             </h2>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
                 <div class="space-y-3">
                     <div class="flex items-start gap-2">
                         <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                        <p><strong>አካውንት መስፈርት:</strong> ቢያንስ 100 ኮኔክሽን (Connections) ሊኖረው ይገባል።</p>
+                        <p><strong>አካውንት መስፈርት:</strong> ቢያንስ 100+ ኮኔክሽን (Connections) ሊኖረው ይገባል።</p>
                     </div>
                     <div class="flex items-start gap-2">
-                        <i class="fas fa-calendar-alt text-blue-500 mt-1"></i>
-                        <p><strong>የክፍያ ጊዜ:</strong> ክፍያ በየሳምንቱ (በየ 7 ቀኑ) ይፈጸማል።</p>
+                        <i class="fas fa-exclamation-triangle text-amber-500 mt-1"></i>
+                        <p><strong>Weekly Limit:</strong> በሊንክዲን ላይ Weekly Connection Limit የሌለው ወይም ያልበራበት መሆን አለበት።</p>
                     </div>
                 </div>
                 <div class="space-y-3">
                     <div class="flex items-start gap-2">
-                        <i class="fas fa-shield-alt text-amber-500 mt-1"></i>
-                        <p><strong>ደህንነት:</strong> የይለፍ ቃልዎ (Password) ያለእርስዎ ፈቃድ በፍጹም አይቀየርም።</p>
+                        <i class="fas fa-lock text-red-500 mt-1"></i>
+                        <p><strong>የይለፍ ቃል ጥንቃቄ:</strong> የሊንክዲን ኢሜይል እና ይለፍ ቃል ሲሰጡ ትክክለኛ መሆኑን በእርግጠኝነት ያረጋግጡ።</p>
                     </div>
                     <div class="flex items-start gap-2">
-                        <i class="fas fa-id-card text-purple-500 mt-1"></i>
-                        <p><strong>መታወቂያ:</strong> ብሔራዊ መታወቂያ ወይም ፓስፖርት እንዲኖርዎት ይመከራል።</p>
+                        <i class="fas fa-calendar-alt text-blue-500 mt-1"></i>
+                        <p><strong>የክፍያ ጊዜ:</strong> ክፍያ በየሳምንቱ (በየ 7 ቀኑ) ይፈጸማል።</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
         </section>
     </main>
 
-    <!-- Footer ከባለቤትነት ፎቶ እና ስም ጋር -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 py-6 text-center text-xs mt-12 border-t border-gray-700">
         <div class="max-w-4xl mx-auto px-4 flex flex-col items-center justify-center gap-3">
             <img src="Screenshot_20230616_074134_Resume Maker.jpg" alt="Aron Shimelis" class="w-12 h-12 rounded-full border-2 border-gray-500 object-cover shadow-md">
@@ -123,7 +123,7 @@
         </div>
     </footer>
 
-    <!-- ፎርሙን ሞልተው ሲጨርሱ መረጃውን ቀጥታ ወደ አንተ ቴሌግራም የሚመራ አጭር ስክሪፕት -->
+    <!-- Script -->
     <script>
         function sendToTelegram() {
             const name = document.getElementById('fullName').value;
@@ -148,7 +148,6 @@
                             `📅 የአካውንት ዕድሜ: ${accountAge}\n` +
                             `🪪 መታወቂያ ሁኔታ: ${idStatus}`;
 
-            // ወደ አንተ የግል ቴሌግራም የሚወስድ ሊንክ
             const telegramUrl = `https://t.me/Ethiolinkedin12?text=${encodeURIComponent(message)}`;
             window.open(telegramUrl, '_blank');
         }
