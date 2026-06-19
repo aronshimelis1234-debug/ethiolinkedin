@@ -5,62 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethio LinkedIn Renting</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans p-4">
 
-    <!-- Language Switcher -->
-    <div class="fixed top-2 right-2 z-50 flex gap-1">
+    <div class="flex gap-2 justify-center mb-6">
         <button onclick="setLanguage('am')" class="bg-white px-2 py-1 rounded shadow text-xs font-bold border">አማ</button>
         <button onclick="setLanguage('en')" class="bg-white px-2 py-1 rounded shadow text-xs font-bold border">EN</button>
         <button onclick="setLanguage('ti')" class="bg-white px-2 py-1 rounded shadow text-xs font-bold border">ትግ</button>
         <button onclick="setLanguage('om')" class="bg-white px-2 py-1 rounded shadow text-xs font-bold border">ኦሮ</button>
     </div>
 
-    <!-- Header -->
-    <header class="bg-[#0077b5] text-white py-6 shadow-md text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <img src="IMG_20260619_121402_550.jpg" alt="Logo" class="w-24 h-24 mx-auto rounded-full border-4 border-white object-cover mb-3 shadow-lg">
-            <h1 class="text-3xl font-bold">Ethio LinkedIn Renting</h1>
-        </div>
+    <header class="bg-[#0077b5] text-white py-6 shadow-md text-center rounded-2xl mb-6">
+        <h1 class="text-2xl font-bold">Ethio LinkedIn Renting</h1>
     </header>
 
-    <main class="max-w-4xl mx-auto px-4 py-8">
-        <!-- Requirements Section -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
-            <h2 class="text-xl font-bold text-[#0077b5] mb-4" data-am="መስፈርቶች እና ጥንቃቄዎች" data-en="Requirements & Precautions" data-ti="ረቂቅን ጥንቃቄን" data-om="Qajeelfama">መስፈርቶች እና ጥንቃቄዎች</h2>
-            <ul class="text-sm space-y-3">
-                <li data-am="• ቢያንስ 100+ ኮኔክሽን ያለው" data-en="• At least 100+ connections" data-ti="• ትካለ 100+ ኮኔክሽን ዘለዎ" data-om="• Connnection 100+ qabu"></li>
-                <li data-am="• Weekly Limit የሌለው ወይም ያልበራበት" data-en="• No Weekly Limit or disabled" data-ti="• Weekly Limit ዘይብሉ" data-om="• Weekly Limit kan hin qabne"></li>
-                <li data-am="• የሊንክዲን ኢሜይል እና ፓስዎርድ ትክክል መሆኑን ያረጋግጡ" data-en="• Verify LinkedIn email and password" data-ti="• ኢሜይልን ፓስዎርድን ኣረጋግጹ" data-om="• Email fi password keessan mirkaneessaa"></li>
+    <div class="max-w-xl mx-auto space-y-6">
+        <section class="bg-white p-6 rounded-2xl shadow-sm border">
+            <h2 id="reqTitle" class="text-xl font-bold text-[#0077b5] mb-4" data-am="መስፈርቶች እና ጥንቃቄዎች" data-en="Requirements" data-ti="ረቂቅ" data-om="Qajeelfama">መስፈርቶች እና ጥንቃቄዎች</h2>
+            <ul id="reqList" class="text-sm space-y-2">
+                <li data-am="• ቢያንስ 100+ ኮኔክሽን ያለው" data-en="• 100+ Connections" data-ti="• 100+ ኮኔክሽን ዘለዎ" data-om="• 100+ Connections qabu"></li>
+                <li data-am="• Weekly Limit የሌለው" data-en="• No Weekly Limit" data-ti="• Weekly Limit ዘይብሉ" data-om="• Weekly Limit kan hin qabne"></li>
+                <li data-am="• ፓስዎርድ ትክክል መሆኑን ያረጋግጡ" data-en="• Verify password" data-ti="• ፓስዎርድኩም ኣረጋግጹ" data-om="• Password mirkaneessaa"></li>
             </ul>
         </section>
 
-        <!-- Form -->
-        <section class="bg-white rounded-2xl p-6 shadow-md space-y-4">
-            <input type="text" id="fullName" class="w-full p-3 border rounded-lg" placeholder="Full Name / ስም">
-            <input type="text" id="phone" class="w-full p-3 border rounded-lg" placeholder="Phone / ስልክ">
-            <button onclick="sendToTelegram()" class="w-full bg-[#0077b5] text-white py-3 rounded-lg font-bold" data-am="መረጃውን ላክ" data-en="Send Information" data-ti="ሓበሬታ ለኣኽ" data-om="Odeeffannoo Ergii">መረጃውን ላክ</button>
+        <section class="bg-white p-6 rounded-2xl shadow-sm border">
+            <input type="text" id="fullName" class="w-full p-3 border rounded-lg mb-4" placeholder="Full Name / ስም">
+            <button id="sendBtn" onclick="sendToTelegram()" class="w-full bg-[#0077b5] text-white py-3 rounded-lg font-bold" data-am="መረጃውን ላክ" data-en="Send Info" data-ti="ሓበሬታ ለኣኽ" data-om="Odeeffannoo ergii">መረጃውን ላክ</button>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-6">
-        <img src="Screenshot_20230616_074134_Resume Maker.jpg" class="w-16 h-16 mx-auto rounded-full border-2 border-gray-500 shadow-md">
-        <p class="text-xs mt-2">&copy; 2026 Aron Shimelis Belete</p>
-    </footer>
+    </div>
 
     <script>
         function setLanguage(lang) {
-            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-                el.innerText = el.getAttribute('data-' + lang);
-            });
+            // ርዕስ መቀየር
+            const title = document.getElementById('reqTitle');
+            title.innerText = title.getAttribute('data-' + lang);
+            
+            // ዝርዝር መቀየር
+            const items = document.querySelectorAll('#reqList li');
+            items.forEach(el => el.innerText = el.getAttribute('data-' + lang));
+            
+            // ቁልፍ መቀየር
+            const btn = document.getElementById('sendBtn');
+            btn.innerText = btn.getAttribute('data-' + lang);
         }
+
         function sendToTelegram() {
             const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
-            const message = "አዲስ ምዝገባ: " + name + ", ስልክ: " + phone;
-            window.open("https://t.me/Ethiolinkedin12?text=" + encodeURIComponent(message), '_blank');
+            window.open("https://t.me/Ethiolinkedin12?text=" + encodeURIComponent("አዲስ ምዝገባ: " + name), '_blank');
         }
     </script>
 </body>
