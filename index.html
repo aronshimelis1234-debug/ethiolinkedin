@@ -132,7 +132,6 @@
                     </div>
                 </div>
 
-                <!-- የፈንክሽን ጥሪው በትክክል ተቀምጧል -->
                 <button type="button" onclick="sendToTelegram()" class="w-full bg-[#0077b5] hover:bg-[#005f93] text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-md flex items-center justify-center gap-2 mt-4 cursor-pointer">
                     <i class="fab fa-telegram-plane text-xl"></i> መረጃውን በቴሌግራም ላክ
                 </button>
@@ -167,6 +166,7 @@
         <!-- የእውቂያ እና የማኅበራዊ ገጽ ሊንኮች -->
         <section class="mt-8 text-center space-y-4">
             <div class="flex justify-center gap-4 flex-wrap">
+                <!-- ተጠቃሚዎች ቻናልህን እንዲቀላቀሉ @Ethiolinkedin12 በትክክል ተቀምጧል -->
                 <a href="https://telegram.me/Ethiolinkedin12" target="_blank" class="bg-blue-50 text-[#0077b5] border border-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition flex items-center gap-2">
                     <i class="fab fa-telegram shadow-sm"></i> የቴሌግራም ቻናል
                 </a>
@@ -185,7 +185,7 @@
         </div>
     </footer>
 
-    <!-- አውቶማቲክ የመላኪያ ስክሪፕት -->
+    <!-- አውቶማቲክ የግል መልዕክት መላኪያ ስክሪፕት -->
     <script>
         function sendToTelegram() {
             const name = document.getElementById('fullName').value;
@@ -201,9 +201,9 @@
                 return;
             }
 
-            // የቦት መረጃ እና መረጃው የሚላክበት የቻናል አድራሻ (@Ethiolinkedin1221)
+            // ቦት ቶከን እና ያንተ የግል Chat ID ቁጥር (ቀጥታ @Ethiolinkedin1221 ላይ እንዲገባ ያደርገዋል)
             const botToken = "8975610552:AAGiCcQu6fmVPywy-GKPQVeDgLxAsyUwVE4";
-            const chatId = "@Ethiolinkedin1221"; 
+            const chatId = "377151062"; 
 
             const message = `✨ አዲስ አካውንት አከራይ ተመዝግቧል ✨\n\n` +
                             `👤 ስም: ${name}\n` +
@@ -232,9 +232,8 @@
                     alert("መረጃዎ በትክክል ተልኳል! በቅርቡ እናገኝዎታለን።");
                     document.getElementById('rentalForm').reset();
                 } else {
-                    // ኤፒአይ ላይ ስህተት ካለ ማረጋገጫ
                     console.error('Telegram API Error:', data);
-                    alert("ክስተት ተፈጥሯል! እባክዎ ቦቱ በቻናሉ ላይ Admin መሆኑን ያረጋግጡ።");
+                    alert("ክስተት ተፈጥሯል! እባክዎ መጀመሪያ በቴሌግራምዎ ሄደው ለቦቱ /start ማለታቸውን ያረጋግጡ።");
                 }
             })
             .catch(error => {
