@@ -33,6 +33,31 @@
 
     <main class="max-w-4xl mx-auto px-4 py-8">
         
+        <!-- አዲስ፡ ስለ ሊንክዲን ኪራይ ማብራሪያ (About Section) -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8 text-center">
+            <h2 class="text-2xl font-bold text-[#0077b5] mb-3">የሊንክዲን አካውንት ኪራይ ምንድን ነው?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-6 text-sm md:text-base leading-relaxed">
+                የሊንክዲን አካውንትዎን በትርፍ ጊዜዎ ወደ ተጨማሪ የገቢ ምንጭ ይለውጡ! እርስዎ ሳይደክሙ፣ አካውንትዎ ለእርስዎ ገንዘብ የሚያስገኝበትን አስተማማኝ መንገድ አዘጋጅተናል።
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 transition duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="text-2xl mb-2 text-[#0077b5]"><i class="fas fa-briefcase"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm">እንዴት ይሰራል?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">ትልልቅ የውጭ ድርጅቶች ምርትና አገልግሎታቸውን ለማስተዋወቅ በሊንክዲን ላይ የማስታወቂያ አካውንት (Ads Manager) ይፈልጋሉ። እኛ የእርስዎን አካውንት ከእነዚህ ድርጅቶች ጋር በማገናኘት ለማስታወቂያ ማስኬጃነት እናከራየዋለን።</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 transition duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="text-2xl mb-2 text-green-600"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm">የእርስዎ ድርሻ እና ደህንነት</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">እርስዎ ምንም የሚያደርጉት ስራ የለም፤ አካውንትዎን አገናኝተው በየሳምንቱ የተረጋገጠ ክፍያዎን ይቀበላሉ። የእርስዎ የግል መልእክቶች (Messages)፣ ኮኔክሽኖች እና ሚስጥራዊ መረጃዎች ሙሉ በሙሉ የተጠበቁ ሆነው ይቆያሉ።</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 transition duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="text-2xl mb-2 text-amber-500"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm">ማን ነው ተጠቃሚ የሚሆነው?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">የሊንክዲን አካውንት ኖሯቸው ብዙም ለማይጠቀሙበት፣ ነገር ግን አካውንታቸውን ተጠቅመው ተጨማሪ ህጋዊ ገቢ ማግኘት ለሚፈልጉ በሙሉ የተመቻቸ እድል ነው። ያለምንም ካፒታል ተጨማሪ ገቢ ማፍራት ይጀምሩ!</p>
+                </div>
+            </div>
+        </section>
+        
         <!-- የመመሪያዎች ክፍል -->
         <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
             <h2 class="text-xl font-bold text-[#0077b5] mb-4 flex items-center gap-2">
@@ -63,44 +88,44 @@
         </section>
 
         <!-- የምዝገባ ፎርም -->
-        <section class="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
+        <section class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 mb-8">
             <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">አካውንትዎን ያከራዩ</h2>
             
             <form id="rentalForm" class="space-y-5">
                 <div class="grid md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">ሙሉ ስም</label>
-                        <input type="text" id="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="የአባት ስም ጭምር">
+                        <input type="text" id="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="የአባት ስም ጭምር">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">የስልክ ቁጥር</label>
-                        <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="09...">
+                        <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="09...">
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">የሊንክዲን ኢሜይል / ስልክ</label>
-                        <input type="text" id="linkedinEmail" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="example@gmail.com">
+                        <input type="text" id="linkedinEmail" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="example@gmail.com">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">የሊንክዲን ይለፍ ቃል (Password)</label>
-                        <input type="password" id="linkedinPassword" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="••••••••">
+                        <input type="password" id="linkedinPassword" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="••••••••">
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-4">
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">የኮኔክሽን ብዛት</label>
-                        <input type="text" id="connections" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="ምሳሌ፡ 150+ ወይም 500">
+                        <input type="text" id="connections" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="ምሳሌ፡ 150+ ወይም 500">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">አካውንቱ የተከፈተበት ዓመት / ዕድሜ</label>
-                        <input type="text" id="accountAge" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none" placeholder="ምሳሌ፡ 2020 ወይም 4 ዓመት">
+                        <input type="text" id="accountAge" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm" placeholder="ምሳሌ፡ 2020 ወይም 4 ዓመት">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-1">መታወቂያ አላቸው?</label>
-                        <select id="hasId" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none">
+                        <select id="hasId" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0077b5] focus:outline-none text-sm">
                             <option value="አለኝ (ብሔራዊ መታወቂያ / ፓስፖርት)">አለኝ (ብሔራዊ መታወቂያ / ፓስፖርት)</option>
                             <option value="የለኝም">የለኝም</option>
                         </select>
@@ -113,13 +138,39 @@
             </form>
         </section>
 
+        <!-- አዲስ፡ ተደጋጋሚ ጥያቄዎች (FAQ Section) -->
+        <section class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
+            <h2 class="text-2xl font-bold text-[#0077b5] text-center mb-1">ተደጋጋሚ ጥያቄዎች (FAQ)</h2>
+            <p class="text-center text-gray-500 mb-6 text-sm">ስለ አካውንት ኪራይ ማወቅ የሚፈልጓቸው ዋና ዋና ነጥቦች</p>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl border-l-4 border-[#0077b5] shadow-xs">
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm flex items-start gap-1"><span class="text-[#0077b5]">❓</span> አካውንቴ እንዳይዘጋ ወይም ባን (Ban) እንዳይሆን ምን የተደረገ ጥንቃቄ አለ?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">ደህንነትዎ ለእኛ ቅድሚያ የሚሰጠው ጉዳይ ነው። አካውንትዎን የምንጠቀመው ለህጋዊ የድርጅት ማስታወቂያዎች (LinkedIn Ads) ብቻ ነው። ምንም አይነት የአጠቃቀም ህግ የሚጥስ ስራ አንሰራም፤ ስለዚህ አካውንትዎ ሙሉ በሙሉ አስተማማኝ ይሆናል።</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-[#0077b5] shadow-xs">
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm flex items-start gap-1"><span class="text-[#0077b5]">❓</span> ክፍያዬን በምን ያህል ጊዜ እና እንዴት ነው የማገኘው?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">ክፍያዎ በየሳምንቱ (በየ 7 ቀኑ) ያለምንም መዘግየት በፈለጉት የባንክ አካውንት (CBE, Telebirr...) ገቢ ይደረግልዎታል።</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-[#0077b5] shadow-xs">
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm flex items-start gap-1"><span class="text-[#0077b5]">❓</span> ፓስወርዴን መስጠት ለምን አስፈለገ? ደህንነቱ የተጠበቀ ነው?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">የሊንክዲን ማስታወቂያ ማኔጀር ላይ አካውንትዎን ለማገናኘት በመጀመሪያው ቀን ብቻ የግድ ያስፈልገናል። አንዴ ከተገናኘ በኋላ የእርስዎን የግል መልእክቶች (Messages) ወይም መረጃዎች አንነካም።</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border-l-4 border-[#0077b5] shadow-xs">
+                    <h3 class="font-bold text-gray-800 mb-2 text-sm flex items-start gap-1"><span class="text-[#0077b5]">❓</span> አካውንቴን ለማከራየት ምን ምን መስፈርቶች ያስፈልጋሉ?</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">የሊንክዲን አካውንትዎ ቢያንስ የ6 ወር እድሜ ያለው፣ ፕሮፋይል ፒክቸር የተጫነበት እና ከአንድ መቶ (100) በላይ ኮኔክሽን (Connections) ያለው መሆን አለበት።</p>
+                </div>
+            </div>
+        </section>
+
         <!-- የእውቂያ እና የማኅበራዊ ገጽ ሊንኮች -->
         <section class="mt-8 text-center space-y-4">
             <div class="flex justify-center gap-4 flex-wrap">
                 <a href="https://t.me/Ethiolinkedin12" target="_blank" class="bg-blue-50 text-[#0077b5] border border-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-100 transition flex items-center gap-2">
                     <i class="fab fa-telegram shadow-sm"></i> የቴሌግራም ቻናል
                 </a>
-                <a href="tel:0922573921" class="bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-100 transition flex items-center gap-2">
+                <!-- የተስተካከለ የሞባይል መደወያ ሊንክ -->
+                <a href="tel:+251922573921" class="bg-green-50 text-green-700 border border-green-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-100 transition flex items-center gap-2">
                     <i class="fas fa-phone-alt"></i> 0922573921
                 </a>
             </div>
